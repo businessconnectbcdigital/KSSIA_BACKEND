@@ -66,10 +66,7 @@ jobs:
           key: ${{ env.SSH_KEY }}
 
           script: |
-            # Update system and install Docker if not installed
-            sudo apt-get update
-            sudo apt-get install -y docker.io
-
+            set -e
             # Login to Amazon ECR
             aws ecr get-login-password --region ${{ env.AWS_REGION }} | sudo docker login --username AWS --password-stdin ${{ env.ECR_REGISTRY }}
 
