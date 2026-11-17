@@ -1,4 +1,4 @@
-name: Deploy KSSIA-Backend to AWS Lightsail
+name: Deploy KSSIA-Backend to AWS ec2
 
 on:
   push:
